@@ -30,7 +30,9 @@ const mapStateToProps = (state) => {
   return { songs: state.songs };
 };
 
-//Connect is  function that invokes another function
+//Connect can also use action creators. We provide the connect function just the action creator
+// as a JS object
+
 export default connect(mapStateToProps, {
   selectSong,
 })(SongList);
